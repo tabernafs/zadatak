@@ -82,3 +82,22 @@ class Site extends CI_Controller {
 		}
 	}
 }
+		
+	function public_members()
+		{
+			
+		$this->load->library('Grocery_CRUD');
+		$crud = new grocery_CRUD();
+		$crud->columns('id');
+		$crud->fields('first_name','last_name','web','email_address');
+        $crud->set_table('membership');
+		return $crud;
+		
+		//$data['output'] = $crud->render();
+
+		$data['main_content']='public_data';
+		$this->load->view('includes/template', $data);
+		
+				
+		}
+		

@@ -30,6 +30,5 @@
 	?>
 	
 	<?php echo validation_errors('<p class="error">'); ?>
-		
-</fieldset>
-<?php $this->load->view('includes/public_membersdata'); ?>
+	
+     
